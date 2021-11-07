@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=bogosort_online
+POSTGRES_USER=qMSiVZiwRYutNBzhnSunjDFOKqgjBPpJ
+POSTGRES_PASSWORD=i7CHL27jTS0VXew4SkBJ6O4iFwqnyg3yegvvgIn8usA6vgxG4MiJsHJQuF8sczlu
