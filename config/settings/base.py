@@ -1,6 +1,8 @@
 """
 Base settings to build other settings files upon.
 """
+
+import os
 from pathlib import Path
 
 import environ
@@ -14,6 +16,12 @@ READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
 if READ_DOT_ENV_FILE:
     # OS environment variables take precedence over variables from .env
     env.read_env(str(ROOT_DIR / ".env"))
+
+# TODO CLEAN UP THIS ENV VARIABLE JANK
+os.environ["USE_DOCKER"] = "yes"
+os.environ[
+    "DATABASE_URL"
+] = "postgres://postgres:password@localhost:5432/bogosort_online"
 
 # GENERAL
 # ------------------------------------------------------------------------------
