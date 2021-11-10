@@ -1,0 +1,8 @@
+create container:
+docker run --name bogo-db -p 5432:5432 -e POSTGRES_PASSWORD=password -d postgres:13.2
+
+uses
+docker exec -ti bogo-db psql -U postgres
+
+set DATABASE_URL=postgres://postgres:password@localhost:5432/bogosort_online
+change USE_DOCKER=yes or no somewhere?
